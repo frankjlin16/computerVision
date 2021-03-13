@@ -6,32 +6,26 @@
   <meta charset="UTF-8">
   <meta name = "description" content = "Computer Vision Project">
   <meta name="author" content= "Stark Industries">
-  <link href = "{% static 'css/upload.css' %}" rel = "stylesheet">
+  <link href = "{% static 'css/index.css' %}" rel = "stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>  
 
-<div id="navbar">
-    <p>
-        Stark Industries
-        
-    </p>
-</div>	
-
-
-
-<form enctype="multipart/form-data" action="{% url 'vision:upload' %}" method="post">
-    <div id="choosefile">
-    {% csrf_token %}
-    {{ form }}
+    <div id="navbar">
+        <p>
+            Stark Industries
+            
+        </p>
     </div>
-    <div id="button_div">
-    <button type="submit">Upload</button>
-</div>
-</form>
+
+    <div id ="description">
+    <h1>Welcome to Computer Vision Project</h1>  
+
+    <p> This project was created to judge how presentable you look and offer suggestions. </p>
+
+    <button onclick="window.location.href='upload'" id="upload"> Ready to start? </button>
 
 </div>
-
 </body>  
 </html>  

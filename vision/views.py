@@ -7,7 +7,11 @@ from vision.forms import ImageForm
 
 def index(request):
     """ Index page """
-    return HttpResponse("Hello, world!")
+    context = {
+        "data":"testing, testing, 123",
+        "list": [1,2,3,4,5,6]
+    }
+    return render(request, "index.html", context)
 
 
 def upload(request):
