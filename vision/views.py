@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from vision.forms import ImageForm
 
@@ -22,6 +22,11 @@ def upload(request):
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponse("Upload successful!")
+            return redirect('vision:result')
     context = {'form': form}
     return render(request, 'vision/upload.html', context)
+
+
+def result(request):
+    """ Result page """
+
