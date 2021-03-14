@@ -29,4 +29,4 @@ def upload(request):
 
 def result(request):
     """ Result page """
-
+    return render(request, 'vision/result.html')
