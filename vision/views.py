@@ -11,7 +11,7 @@ def index(request):
         "data":"testing, testing, 123",
         "list": [1,2,3,4,5,6]
     }
-    return render(request, "index.html", context)
+    return render(request, "vision/index.html", context)
 
 
 def upload(request):

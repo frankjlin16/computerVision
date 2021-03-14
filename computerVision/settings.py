@@ -28,7 +28,6 @@ ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/var/www/static/',
 ]
 
 # Application definition
@@ -123,6 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = "/var/www/vision.com/static/"
 
 # Heroku settings
 import django_heroku
