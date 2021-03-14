@@ -1,0 +1,1 @@
+web: gunicorn computerVision.wsgi --log-file -
