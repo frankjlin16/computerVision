@@ -21,7 +21,8 @@ def upload(request):
     else:
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            image_field = form.cleaned_data
+            print(image_field['image']) # Todo: Returns uploaded file
             return redirect('vision:result')
     context = {'form': form}
     return render(request, 'vision/upload.html', context)
